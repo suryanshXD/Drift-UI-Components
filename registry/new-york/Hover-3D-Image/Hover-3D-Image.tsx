@@ -5,7 +5,7 @@ interface style {
   width: number;
 }
 
-export default function HoverTiltImage({ img, width }: style) {
+export default function Hover3DImage({ img, width }: style) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
