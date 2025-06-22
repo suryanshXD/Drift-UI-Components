@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
@@ -17,7 +18,7 @@ export default function AnimatedTextBadge({ words, varient }: content) {
   React.useEffect(() => {
     const interval = setInterval(() => {
       setIndex((currentIndex) => (currentIndex + 1) % words.length);
-    }, 4000);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 

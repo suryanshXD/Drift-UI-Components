@@ -1,5 +1,5 @@
-import { animate, motion } from "framer-motion";
-import { li } from "framer-motion/client";
+"use client";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 interface content {
