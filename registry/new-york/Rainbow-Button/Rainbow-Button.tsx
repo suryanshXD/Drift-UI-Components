@@ -12,7 +12,7 @@ export default function RainbowButton({ text }: { text: string }) {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative w-fit">
         <div className="relative bg-black text-white text-center py-2 px-6 rounded-lg transition-colors duration-200 z-10 cursor-pointer ">
           {text}
         </div>
