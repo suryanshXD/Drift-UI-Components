@@ -13,8 +13,16 @@ export default function Hover3DImage({ img, width }: style) {
   const mouseXspring = useSpring(x);
   const mouseYspring = useSpring(y);
 
-  const rotateX = useTransform(mouseYspring, [-0.5, 0.5], ["18deg", "-18deg"]);
-  const rotateY = useTransform(mouseXspring, [-0.5, 0.5], ["18deg", "-18deg"]);
+  const rotateX = useTransform(
+    mouseYspring,
+    [-0.5, 0.5],
+    ["17.5deg", "-17.5deg"]
+  );
+  const rotateY = useTransform(
+    mouseXspring,
+    [-0.5, 0.5],
+    ["17.5deg", "-17.5deg"]
+  );
 
   const handelMouseMove = (e: any) => {
     const rect = e.target.getBoundingClientRect();
@@ -46,14 +54,15 @@ export default function Hover3DImage({ img, width }: style) {
         }}
         onMouseMove={handelMouseMove}
         onMouseLeave={handelMouseLeave}
-        className="absolute p-6  rounded-lg bg-gradient-to-br from-indigo-300 to-violet-200 shadow-2xl"
+        transition={{ delay: 0.3 }}
+        className=" p-4 rounded-lg bg-gradient-to-br from-indigo-300 to-violet-200 shadow-2xl"
       >
         <motion.img
           style={{
-            transform: "translateZ(60px)",
+            transform: "translateZ(40px)",
             transformStyle: "preserve-3d",
           }}
-          className="relative rounded-lg shadow-3xl"
+          className=" rounded-lg shadow-3xl"
           src={`${img}`}
           width={`${width}`}
         />
